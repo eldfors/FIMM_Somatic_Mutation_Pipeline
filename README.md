@@ -9,27 +9,45 @@ The pipeline processes a pair of tumor and normal genome sequencing reads pre-al
 
 The FIMM Somatic Mutation Pipeline requires the following tools to be installed and configured:
 
-1. [VarScan](http://dkoboldt.github.io/varscan): VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, and similar instruments.
+1. [Python 2.7](https://www.python.org/download/releases/2.7/)
+    - Additional Python modules:
+      - pandas
+      - PyVCF
+      - configparser
 
-2. [SnpEff](http://snpeff.sourceforge.net/): SnpEff is a genetic variant annotation and effect prediction toolbox. It annotates and predicts the effects of variants on genes (such as amino acid changes).
+2. [VarScan](http://dkoboldt.github.io/varscan): VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, and similar instruments.
 
-3. [Samtools](http://www.htslib.org/): Samtools is a suite of programs for interacting with high-throughput sequencing data. It allows for efficient manipulation of alignments in the SAM/BAM format, including sorting, indexing, and generating alignments in a per-position format.
+3. [SnpEff](http://snpeff.sourceforge.net/): SnpEff is a genetic variant annotation and effect prediction toolbox. It annotates and predicts the effects of variants on genes (such as amino acid changes).
+
+4. [Samtools](http://www.htslib.org/): Samtools is a suite of programs for interacting with high-throughput sequencing data. It allows for efficient manipulation of alignments in the SAM/BAM format, including sorting, indexing, and generating alignments in a per-position format.
 
 4. Reference Genome: The pipeline uses a reference genome for alignment and variant calling. This should be downloaded from [ENSEMBL](http://www.ensembl.org/info/data/ftp/index.html). The specific version (e.g., hg38 for human) will depend on your research needs.
 
 Please follow the respective links to access the official documentation and download pages for each tool.
 
-## Installation
-
+## Installation and Setup
 To install the pipeline, clone this repository to your local machine using git:
 
-git clone https://github.com/<your-username>/FIMM_Somatic_Mutation_Pipeline.git
+First, clone this repository to your local machine using git clone. Replace [url] with the URL of your repository:
+git clone https://github.com<your-username>/FIMM_Somatic_Mutation_Pipeline.git
+
+Setup Python Virtual Environment: We recommend you to use a Python virtual environment to manage the dependencies. You can set up the virtual environment using the following command:
+
+python -m venv somatic_mutation_pipeline
+
+To activate the environment, use:
+
+On Windows:
+env\Scripts\activate
+
+On Unix or MacOS:
+source env/bin/activate
+
+Install Dependencies: Once you have your virtual environment setup and activated, you can install the python module dependencies using the following command:
+
+pip install -r requirements.txt
   
-Then navigate into the cloned directory:
-
-cd FIMM_Somatic_Mutation_Pipeline
-
-Next, make sure you have all the dependencies installed and properly configured. The locations of these tools need to be specified in the configuration file (config.ini).
+Next, make sure you have all varscan, snpeff and samtools installed and properly configured. The locations of these tools need to be specified in the configuration file (config.ini).
 
 ## Usage
 
