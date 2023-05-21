@@ -9,13 +9,13 @@ The pipeline processes a pair of tumor and normal genome sequencing reads pre-al
 
 The FIMM Somatic Mutation Pipeline requires the following tools to be installed and configured:
 
-1. [VarScan](http://varscan.sourceforge.net/): VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, SOLiD, Life/PGM, Roche/454, and similar instruments.
+1. [VarScan](http://dkoboldt.github.io/varscan): VarScan is a platform-independent mutation caller for targeted, exome, and whole-genome resequencing data generated on Illumina, and similar instruments.
 
 2. [SnpEff](http://snpeff.sourceforge.net/): SnpEff is a genetic variant annotation and effect prediction toolbox. It annotates and predicts the effects of variants on genes (such as amino acid changes).
 
 3. [Samtools](http://www.htslib.org/): Samtools is a suite of programs for interacting with high-throughput sequencing data. It allows for efficient manipulation of alignments in the SAM/BAM format, including sorting, indexing, and generating alignments in a per-position format.
 
-4. Reference Genome: The pipeline uses a reference genome for alignment and variant calling. This should be downloaded from a trusted source such as [UCSC](http://hgdownload.soe.ucsc.edu/downloads.html), [ENSEMBL](http://www.ensembl.org/info/data/ftp/index.html), or [NCBI](https://www.ncbi.nlm.nih.gov/genome/guide/human/). The specific version (e.g., hg38 for human) will depend on your research needs.
+4. Reference Genome: The pipeline uses a reference genome for alignment and variant calling. This should be downloaded from [ENSEMBL](http://www.ensembl.org/info/data/ftp/index.html). The specific version (e.g., hg38 for human) will depend on your research needs.
 
 Please follow the respective links to access the official documentation and download pages for each tool.
 
