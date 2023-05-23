@@ -29,32 +29,9 @@ Please follow the respective links to access the official documentation and down
 To install the pipeline, clone this repository to your local machine using git:
 
 First, clone this repository to your local machine using git clone. Replace [url] with the URL of your repository:
-git clone https://github.com<your-username>/FIMM_Somatic_Mutation_Pipeline.git
+git clone https://github.com/eldfors/FIMM_Somatic_Mutation_Pipeline.git
 
-Setup Python Virtual Environment: This project uses a Python virtual environment to manage dependencies. You can set up the virtual environment using the following command:
-
-python -m venv somatic_mutation_pipeline
-
-To activate the environment, use:
-
-On Windows:
-.\somatic_mutation_pipeline_venv\Scripts\activate
-
-On Unix or MacOS:
-source somatic_mutation_pipeline_venv/bin/activate
-
-Install Dependencies: Once you have your virtual environment setup and activated, you can install the python module dependencies using the following command:
-
-pip install -r requirements.txt
-  
-Next, make sure you have all varscan, snpeff and samtools installed and properly configured. The locations of these tools need to be specified in the configuration file (config.ini).
-
-## Usage
-
-This project uses a Python virtual environment to manage dependencies.
-source myproject/venv/bin/activate
-source somatic_mutation_pipeline_venv/bin/activate
-
+    ...
   
 ## MIT License
 
